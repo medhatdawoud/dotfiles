@@ -61,13 +61,13 @@ suspicious-package qlvideo spotify focus dropbox front qmoji slack
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
 touch ~/.ssh/config
-ssh-keygen -t rsa -b 4096 -C "me+github@kentcdodds.com"
+ssh-keygen -t rsa -b 4096 -C "medhatdawoud@gmail.com"
 echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_rsa" | tee ~/.ssh/config
 eval "$(ssh-agent -s)"
 echo "run 'pbcopy < ~/.ssh/id_rsa.pub' and paste that into GitHub"
 
 echo "cloning dotfiles"
-git clone git@github.com:kentcdodds/dotfiles.git "${HOME}/dotfiles"
+git clone git@github.com:medhatdawoud/dotfiles.git "${HOME}/dotfiles"
 ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
 ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
