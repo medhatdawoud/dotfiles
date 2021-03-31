@@ -29,16 +29,8 @@ echo "installing homebrew"
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo "brew installing stuff"
-# hub: a github-specific version of git
-# libdvdcss: makes handbreak capable of ripping DVDs
-# ripgrep: rg is faster than alternatives
-# imagemagick: eventually I will need this for something
-# ffmpeg: eventually I'll need this for something
 # tree: really handy for listing out directories in text
-# bat: A cat(1) clone with syntax highlighting and Git integration.
-# switchaudio-osx: allows me to switch the audio device via the command line
-brew install git hub libdvdcss ripgrep imagemagick watchman tree bat \
-delta switchaudio-osx
+brew install git tree delta
 
 echo "installing node (via n-install)"
 curl -L https://git.io/n-install | bash
@@ -48,15 +40,14 @@ echo "npm --version: $(npm --version)"
 
 echo "installing a few global npm packages"
 npm install --global serve fkill-cli npm-quick-run \
-semantic-release-cli npm-check-updates
+semantic-release-cli npm-check-updates yarn
 
 echo "installing apps with brew cask"
-brew cask install alfred google-chrome firefox brave-browser bettertouchtool divvy \
-bartender google-drive-file-stream itsycal visual-studio-code 1password dash \
-screenflow marshallofsound-google-play-music-player skype workflowy \
-sublime-text vlc discord obs handbrake zoomus betterzip avibrazil-rdm sip \
-qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
-suspicious-package qlvideo spotify focus dropbox front qmoji slack
+brew install alfred google-chrome firefox docker \
+itsycal visual-studio-code lastpass dash \
+screenflow notion whatsapp signal \
+discord obs handbrake zoomus calibre \
+suspicious-package qlvideo spotify focus figma slack
 
 echo "Generating an RSA token for GitHub"
 mkdir -p ~/.ssh
