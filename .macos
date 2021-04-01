@@ -45,7 +45,7 @@ semantic-release-cli npm-check-updates yarn
 echo "installing apps with brew cask"
 brew install alfred google-chrome firefox docker \
 itsycal visual-studio-code lastpass dash \
-screenflow notion whatsapp signal \
+screenflow notion whatsapp signal dropbox \
 discord obs handbrake zoomus calibre \
 suspicious-package qlvideo spotify focus figma slack
 
